@@ -21,11 +21,29 @@ namespace Lab_3
                 if (!int.TryParse(input, out inputNumber))
                 {
                     Console.WriteLine("Input not a number");
+                    return;
                 }
 
                 Console.WriteLine("\nNumber\tSquared\tCubed");
                 Console.WriteLine("=======\t=======\t======");
                 Console.WriteLine(inputNumber);
+
+                Console.Write("Continue? (y/n): ");
+                string continueInput = Console.ReadLine().ToLower();
+
+                if (continueInput == "y")
+                {
+                    continue;
+                }
+                else if (continueInput == "n")
+                {
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input");
+                    return;
+                }
             }
         }
     }
