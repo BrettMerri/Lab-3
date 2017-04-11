@@ -12,6 +12,7 @@ namespace Lab_3
         {
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("Learn your squares and cubes!\n");
                 Console.Write("Enter an integer: ");
 
@@ -26,9 +27,12 @@ namespace Lab_3
 
                 Console.WriteLine("\nNumber\tSquared\tCubed");
                 Console.WriteLine("=======\t=======\t======");
-                Console.WriteLine(inputNumber);
+                for (int i = 1; i<=inputNumber; i++)
+                {
+                    Console.WriteLine("{0}\t{1}\t{2}", i, Math.Pow(i, 2), Math.Pow(i, 3));
+                }
 
-                Console.Write("Continue? (y/n): ");
+                Console.Write("\nContinue? (y/n): ");
                 string continueInput = Console.ReadLine().ToLower();
 
                 if (continueInput == "y")
