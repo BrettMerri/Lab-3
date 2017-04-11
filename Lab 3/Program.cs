@@ -10,6 +10,8 @@ namespace Lab_3
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             while (true)
             {
                 Console.Clear();
@@ -25,11 +27,13 @@ namespace Lab_3
                     return;
                 }
 
-                Console.WriteLine("\nNumber\tSquared\tCubed");
-                Console.WriteLine("=======\t=======\t======");
+                Console.WriteLine("\nNumber\t\tSquared\t\tCubed");
+                Console.WriteLine("=======\t\t=======\t\t======");
                 for (int i = 1; i<=inputNumber; i++)
                 {
-                    Console.WriteLine("{0}\t{1}\t{2}", i, Math.Pow(i, 2), Math.Pow(i, 3));
+                    double squared = Math.Pow(i, 2);
+                    double cubed = Math.Pow(i, 3);
+                    Console.WriteLine("{0}\t\t{1}\t\t{2}", i, squared, cubed);
                 }
 
                 Console.Write("\nContinue? (y/n): ");
@@ -45,7 +49,7 @@ namespace Lab_3
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input");
+                    Console.WriteLine("Invalid input!");
                     return;
                 }
             }
